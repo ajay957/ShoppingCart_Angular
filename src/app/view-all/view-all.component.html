@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <h1 class="text-center"><u>View All Products</u></h1>
+                <div class="col col-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" *ng="let i of dat">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{data.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">id: {{data.id}}</li>
+                            <li class="list-group-item">Price: {{data.price}}</li>
+                            <li class="list-group-item">category: {{data.category}}</li>
+                            <li class="list-group-item">rate: {{data.rating.rate}}</li>
+                            <li class="list-group-item">Count: {{data.rating.count}}</li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

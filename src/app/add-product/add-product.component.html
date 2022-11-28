@@ -6,30 +6,30 @@
                 <h1 class="text-center"><u>Add Product</u></h1>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                    <label for="" class="form-label">Product Image</label>
-                   <input type="file" name="" id="" class="form-control">
+                   <input name="image" [(ngModel)]="image" type="file" name="" id="" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Title</label>
-                    <input type="text" class="form-control">
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label">Discription</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="discription" [(ngModel)]="discription" id="" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Rate</label>
-                    <input type="text" class="form-control">
+                    <input name="rate" [(ngModel)]="rate" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Seller Name</label>
-                    <input type="text" class="form-control">
+                    <input name="seller" [(ngModel)]="seller" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                     <label for="" class="form-label">Quantity</label>
-                    <input type="text" class="form-control">
+                    <input name="quantity" [(ngModel)]="quantity" type="text" class="form-control">
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <a href=""><button class="btn btn-success">Submit</button></a>
+                    <a href=""><button (click)="addValues()" class="btn btn-success">Submit</button></a>
                 </div>
             </div>
         </div>

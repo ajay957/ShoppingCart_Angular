@@ -9,10 +9,15 @@ import { ViewAllComponent } from './view-all/view-all.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 const myRoute:Routes=[
   {
     path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"add",
     component:AddProductComponent
   },
   {
@@ -26,7 +31,8 @@ const myRoute:Routes=[
     AppComponent,
     AddProductComponent,
     ViewAllComponent,
-    NavBarComponent
+    NavBarComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

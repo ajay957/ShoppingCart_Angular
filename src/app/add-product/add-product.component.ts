@@ -13,6 +13,8 @@ export class AddProductComponent {
   seller=""
   quantity=""
 
+  
+
 
   addValues=()=>
   {

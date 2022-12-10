@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-add-product',
@@ -7,19 +8,31 @@ import { Component } from '@angular/core';
 })
 export class AddProductComponent {
   image=""
-  title=""
-  discription=""
-  rate=""
-  seller=""
-  quantity=""
+  name=""
+  description=""
+  price=""
 
-  
+  constructor(private api:ApiService){}
 
 
   addValues=()=>
   {
-    let data:any={"image":this.image,"title":this.title,"discription":this.discription,"rate":this.rate,"seller":this.seller,"quantity":this.quantity}
+    let data:any={"image":this.image, "name":this.name,"description":this.description,"price":this.price}
     console.log(data)
+    this.api.addProduct(data).subscribe(
+      (response:any)=>{
+        console.log(response)
+        if (response.status=="success") {
+          alert("product added successfully")
+          this.image=""
+          this.name=""
+          this.description=""
+          this.price=""
+        } else {
+          alert("something went wrong")
+        }
+      }
+    )
   }
 
 }

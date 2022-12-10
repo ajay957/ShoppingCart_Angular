@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-navbar-user></app-navbar-user>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -6,16 +6,13 @@
                 <h1 class="text-center"><u>View All Products</u></h1>
                 <div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4" *ngFor="let i of data">
                     <div class="card">
-                        <img height="400px" width="400px" src="{{i.image}}" class="card-img-top" alt="...">
+                        <img height="400px" width="400px" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80" class="card-img-top" alt="...">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h1 class="card-text">{{i.name}}</h1>
+                          <p class="card-text">{{i.description}}</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">id: {{i.id}}</li>
                             <li class="list-group-item">Price: {{i.price}}</li>
-                            <li class="list-group-item">category: {{i.category}}</li>
-                            <li class="list-group-item">rate: {{i.rating.rate}}</li>
-                            <li class="list-group-item">Count: {{i.rating.count}}</li>
                             <a aria-setsize="40" href="#" class="btn btn-primary">Check Out</a>
                         </ul>
                       </div>

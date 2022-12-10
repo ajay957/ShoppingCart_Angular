@@ -9,6 +9,7 @@ import { ApiService } from '../api.service';
 export class AddProductComponent {
   image=""
   name=""
+  category=""
   description=""
   price=""
 
@@ -17,7 +18,7 @@ export class AddProductComponent {
 
   addValues=()=>
   {
-    let data:any={"image":this.image, "name":this.name,"description":this.description,"price":this.price}
+    let data:any={"image":this.image, "name":this.name, "category":this.category, "description":this.description,"price":this.price}
     console.log(data)
     this.api.addProduct(data).subscribe(
       (response:any)=>{
@@ -26,6 +27,7 @@ export class AddProductComponent {
           alert("product added successfully")
           this.image=""
           this.name=""
+          this.category=""
           this.description=""
           this.price=""
         } else {

@@ -14,6 +14,7 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { UserRegComponent } from './user-reg/user-reg.component';
 import { NavbarUserComponent } from './navbar-user/navbar-user.component';
 import { AdminViewComponent } from './admin-view/admin-view.component';
+import { SearchComponent } from './search/search.component';
 
 const myRoute:Routes=[
   {
@@ -39,6 +40,10 @@ const myRoute:Routes=[
   {
     path:"adminview",
     component:AdminViewComponent
+  },
+  {
+    path:"search",
+    component:SearchComponent
   }
 ]
 
@@ -53,6 +58,7 @@ const myRoute:Routes=[
     UserRegComponent,
     NavbarUserComponent,
     AdminViewComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

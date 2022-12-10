@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row div col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="row g-3 mt-4">
+            <h1 class="text-center"><u>User Login</u></h1>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Email</label>
+                <input name="email" [(ngModel)]="email" type="text" class="form-control">
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">password</label>
+                <input type="password" name="password" [(ngModel)]="password" id="" class="form-control">
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                <button (click)="userValues()" class="btn btn-success">Login</button>
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                <a routerLink="/usersign">Click Here to User Register</a>
+            </div>
+        </div>
+    </div>
+</div>

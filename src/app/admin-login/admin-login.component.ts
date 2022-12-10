@@ -15,7 +15,7 @@ export class AdminLoginComponent {
   adminValues=()=>{
     let data:any={"username":this.username,"password":this.password}
     if(this.username=="admin" && this.password=="12345"){
-      this.route.navigate(['/view'])
+      this.route.navigate(['/add'])
     }
     else{
       alert("the usernme or password is incorrect")
